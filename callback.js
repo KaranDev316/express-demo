@@ -1,5 +1,7 @@
 getUser(1, (user) => {
     console.log('User:', user);
+    const repos = getRepositories(user);
+    console.log('Repos:', repos);
 });
 
 function getUser(id, callback) {
@@ -8,3 +10,9 @@ function getUser(id, callback) {
     callback({ id: id, name: 'Alfred' });
   }, 2000);
 }
+
+function getRepositories(username) {
+    return ['repo1', 'repo2', 'repo3'];
+}
+  
+   
