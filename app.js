@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
 
 app.get(auth);
 
+app.use((req, res, next) => {
+  console.log('Request received');
+  next();
+});
 
 app.get('/about', (req, res) => {
   res.send('About page');
